@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Space_Grotesk, Inter, Doto } from "next/font/google";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 
 const spaceGrotesk = Space_Grotesk({
@@ -63,6 +64,7 @@ export default function RootLayout({
         className={`${spaceGrotesk.variable} ${inter.variable} ${doto.variable} antialiased`}
       >
         {children}
+        <SpeedInsights />
       </body>
     </html>
   );
